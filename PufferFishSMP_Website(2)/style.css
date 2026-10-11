@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root { color-scheme: dark; --bg: #0a101d; --panel: #101a2b; --mint: #79f2bd; --cyan: #19d5e8; --muted: #b9c5d9; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: radial-gradient(ellipse at top, #182b48 0, var(--bg) 58%); color: #f7f9ff; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif; }
+a { color: inherit; }
+.page { width: min(1180px, calc(100% - 36px)); margin: 0 auto; padding-bottom: 28px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 2px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 900; letter-spacing: -.04em; font-size: clamp(18px, 3vw, 25px); }
+.brand span { color: var(--mint); }
+.small-discord { text-decoration: none; font-size: 14px; font-weight: 800; padding: 11px 16px; border: 1px solid #5265ff; border-radius: 10px; background: #5865f2; transition: transform .2s, filter .2s; }
+.small-discord:hover, .discord-button:hover { transform: translateY(-2px); filter: brightness(1.12); }
+.hero { position: relative; overflow: hidden; border: 1px solid #1d3554; border-radius: 20px; background: #0d1728; box-shadow: 0 22px 70px #0006; }
+.banner { display: block; width: 100%; height: auto; max-height: 590px; object-fit: cover; }
+.hero-content { text-align: center; padding: 34px 22px 38px; background: linear-gradient(180deg, #0b1423 0%, #101a2b 100%); }
+.eyebrow { color: var(--mint); font-size: 12px; font-weight: 900; letter-spacing: .18em; margin: 0 0 12px; }
+h1 { font-size: clamp(28px, 5vw, 52px); line-height: 1.08; letter-spacing: -.045em; margin: 0 auto 15px; }
+h1 span { display: block; color: var(--mint); }
+.intro { max-width: 620px; margin: 0 auto 24px; color: var(--muted); line-height: 1.7; }
+.discord-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 25px; border-radius: 12px; text-decoration: none; background: #5865f2; box-shadow: 0 8px 26px #5865f255; font-weight: 900; transition: transform .2s, filter .2s; }
+.discord-icon { font-size: 20px; }
+.launch { margin: 16px 0 0; color: #aab8ce; font-size: 13px; }
+.launch strong { color: #fff; }
+.features { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.feature-card { display: flex; align-items: flex-start; gap: 13px; padding: 19px 16px; border: 1px solid #203957; border-radius: 14px; background: linear-gradient(145deg, #121f33, #0c1524); }
+.feature-icon { font-size: 25px; line-height: 1.2; }
+.feature-card h2 { font-size: 13px; text-transform: uppercase; margin: 2px 0 8px; letter-spacing: .02em; }
+.feature-card p { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 0; }
+footer { padding: 26px 4px 0; text-align: center; color: #8090aa; font-size: 12px; }
+footer a { color: var(--mint); text-decoration: none; }
+@media (max-width: 800px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } .banner { max-height: none; } }
+@media (max-width: 480px) { .page { width: min(100% - 20px, 1180px); } .topbar { padding: 16px 0; } .brand { font-size: 17px; } .small-discord { padding: 10px 11px; font-size: 12px; } .hero-content { padding: 28px 17px; } .features { grid-template-columns: 1fr; } .feature-card { padding: 17px; } }
